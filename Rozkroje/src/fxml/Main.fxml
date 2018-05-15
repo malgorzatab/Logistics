@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+  <children>
+    <TabPane layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Dane wejściowe">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Button id="obliczButton" fx:id="calculateButton" layoutX="561.0" layoutY="493.0" mnemonicParsing="false" onAction="#calculateAction" prefHeight="36.0" prefWidth="79.0" text="Oblicz" />
+                <TextField id="activityField" fx:id="kitsAmountInput" layoutX="291.0" layoutY="114.0" prefHeight="36.0" prefWidth="411.0" promptText="Liczba kompletów" />
+                <TextField id="previousField" fx:id="element1AmountInput" layoutX="291.0" layoutY="178.0" prefHeight="36.0" prefWidth="411.0" promptText="Liczba elementów 1" />
+                <TextField id="tcField" fx:id="element1LengthInput" layoutX="291.0" layoutY="239.0" prefHeight="36.0" prefWidth="411.0" promptText="Długość elementu 1" />
+                <TextField id="tmField" fx:id="element2AmountInput" layoutX="291.0" layoutY="293.0" prefHeight="36.0" prefWidth="411.0" promptText="Liczba elementów 2" />
+                <TextField id="tpField" fx:id="priceInput" layoutX="291.0" layoutY="410.0" prefHeight="36.0" prefWidth="411.0" promptText="Koszt za 1m odpadów" />
+                <Label fx:id="errorLabel" layoutX="57.0" layoutY="517.0" prefHeight="26.0" prefWidth="703.0" text="" textFill="#ff6666">
+                  <font>
+                    <Font size="18.0" />
+                  </font>
+                </Label>
+                <Label layoutX="49.0" layoutY="61.0" text="Długość produktu*" />
+                <Label layoutX="49.0" layoutY="124.0" text="Liczba kompletów*" />
+                <Label layoutX="49.0" layoutY="193.0" text="Liczba elementów 1 rodzaju w 1 komplecie*" />
+                <Label layoutX="49.0" layoutY="303.0" text="Liczba elementów 2 rodzaju w 1 komplecie*" />
+                <Label layoutX="49.0" layoutY="420.0" text="Koszt za 1m odpadów" />
+                <Label layoutX="49.0" layoutY="249.0" text="Długość elementu 1*" />
+                <Button fx:id="deleteButton" layoutX="342.0" layoutY="493.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="35.0" prefWidth="79.0" text="Delete" />
+                <Button id="loadID" fx:id="loadButton" layoutX="451.0" layoutY="493.0" mnemonicParsing="false" onAction="#loadAction" prefHeight="35.0" prefWidth="79.0" text="Load" />
+                <TextField id="activityField" fx:id="lengthInput" layoutX="291.0" layoutY="54.0" prefHeight="36.0" prefWidth="411.0" promptText="Długość produktu" />
+                <Label layoutX="49.0" layoutY="359.0" text="Długość elementu 2*" />
+                <TextField id="tcField" fx:id="element2LengthInput" layoutX="291.0" layoutY="349.0" prefHeight="36.0" prefWidth="411.0" promptText="Długość elementu 2" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
