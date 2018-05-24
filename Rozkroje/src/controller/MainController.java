@@ -1,20 +1,19 @@
 package controller;
 
-import calculations.*;
-import javafx.collections.ObservableList;
+import calculations.Result;
+import calculations.TaskSolver;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -135,9 +134,9 @@ public class MainController implements Initializable {
         double elem1Length = Double.parseDouble(element1LengthInput.getText().trim());
         double elem2Length = Double.parseDouble(element2LengthInput.getText().trim());
 
-        TaskSolver solver = new TaskSolver(lenght, kits, elem1Amount, elem2Amount,price);
+        TaskSolver solver = new TaskSolver(lenght, kits, elem1Length, elem1Amount,elem2Length, elem2Amount,price);
         solver.calculateCutMethods(lenght, elem1Length, elem2Length);
-        solver.calculateGoalFuntion();
+        Result result = solver.calculateGoalFuntion();
 
         //ObservableList<Activity> items = tableView.getItems();
 
@@ -150,7 +149,8 @@ public class MainController implements Initializable {
             try {
                 root = loader.load();
                 ResultsController resultsController = loader.getController();
-                resultsController.setResult(this.solver.getResult());
+               // resultsController.setResult(this.solver.getResult());
+                resultsController.setResult(result);
                 stage.setTitle("SIMPLEX RESULTS");
                 stage.setScene(new Scene(root, 900, 700));
                 stage.show();

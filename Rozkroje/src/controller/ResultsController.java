@@ -20,9 +20,6 @@ public class ResultsController implements Initializable {
     private TextArea cutMethods1Field;
 
     @FXML
-    private TextArea cutMethods2Field;
-
-    @FXML
     private TextArea element1Field;
 
     @FXML
@@ -47,13 +44,22 @@ public class ResultsController implements Initializable {
 
     public void setResult(Result result){
         this.result = result;
-        minimumField.setText(String.valueOf(this.result.getGoal_function_value()));
-        xField.setText(String.valueOf(this.result.getX()));
-        /*CPResult.setText(String.valueOf(this.result.getCriticalPath()));
-        xResult.setText(String.valueOf(this.result.getX()));
-        wariancjaResult.setText(String.valueOf(this.result.getWariancja_sqrt()));
-        probabilityResult.setText(String.valueOf(this.result.getProbability()));
-        timeFrameResult.setText("<"+String.valueOf(result.getCriticalPathCost()-result.getWariancja())+", "+String.valueOf(result.getCriticalPathCost()+result.getWariancja())+">");*/
+
+        double[] points = this.result.getX();
+       // minimumField.setText(String.valueOf(this.result.getGoal_function_value()));
+        for(int i=0; i<points.length; i++){
+            xField.appendText(String.valueOf("x"+(i+1)+"= "+points[i]+" ,"));
+        }
+        wasteField.setText(String.valueOf(this.result.getWaste()));
+        priceField.setText(String.valueOf(this.result.getWaste_price()));
+        minimumField.setText(String.valueOf(this.result.getMinimum()));
+        element1Field.setText(String.valueOf(this.result.getElement1_lenght()));
+        cutMethods1Field.setText(String.valueOf(this.result.getCut_methods()));
+        element2Field.setText(String.valueOf(this.result.getElement2_lenght()));
+        //cutMethods2Field.setText(String.valueOf(this.result.getCut_methods()));
+        condition1Field.setText(String.valueOf(this.result.getElem1_amount()));
+        condition2Field.setText(String.valueOf(this.result.getElem2_amount()));
+
 
     }
 

@@ -21,21 +21,27 @@ public class Task {
 
     //cena za 1m odpadu
     private double price_m;
+    private double elem1_length;
+    private double elem2_length;
 
     private ArrayList<CutMethod> cut_methods;
 
-    public Task(double length, int kits_amount, int elements1_amount, int elements2_amount, double price_m){
+    public Task(double length, int kits_amount, double elem1_length, int elements1_amount, double elem2_length, int elements2_amount, double price_m){
         this.length = length;
         this.kits_amount = kits_amount;
+        this.elem1_length = elem1_length;
         this.elements1_amount = elements1_amount;
+        this.elem2_length = elem2_length;
         this.elements2_amount = elements2_amount;
         this.price_m = price_m;
         this.cut_methods = new ArrayList<>();
     }
 
-    public Task(double length, int kits_amount, int elements1_amount, int elements2_amount){
+    public Task(double length, int kits_amount,double elem1_length, int elements1_amount,double elem2_length, int elements2_amount){
         this.length = length;
         this.kits_amount = kits_amount;
+        this.elem1_length = elem1_length;
+        this.elem2_length = elem2_length;
         this.elements1_amount = elements1_amount;
         this.elements2_amount = elements2_amount;
         this.price_m = -1;
@@ -48,6 +54,22 @@ public class Task {
 
     public double getLength() {
         return length;
+    }
+
+    public double getElem1_length() {
+        return elem1_length;
+    }
+
+    public void setElem1_length(double elem1_length) {
+        this.elem1_length = elem1_length;
+    }
+
+    public double getElem2_length() {
+        return elem2_length;
+    }
+
+    public void setElem2_length(double elem2_length) {
+        this.elem2_length = elem2_length;
     }
 
     public void setLength(double length) {

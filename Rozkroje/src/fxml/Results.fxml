@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ResultsController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResultsController">
   <children>
-    <TextArea fx:id="cutMethods1Field" layoutX="156.0" layoutY="104.0" prefHeight="42.0" prefWidth="392.0" wrapText="true" />
+    <TextArea fx:id="cutMethods1Field" editable="false" layoutX="156.0" layoutY="104.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="112.0" prefWidth="392.0" wrapText="true" />
     <Label layoutX="156.0" layoutY="68.0" prefHeight="25.0" prefWidth="213.0" text="Sposoby rozkroju" />
     <Label layoutX="58.0" layoutY="73.0" text="Długość" />
     <TextArea fx:id="element1Field" layoutX="56.0" layoutY="104.0" prefHeight="42.0" prefWidth="92.0" wrapText="true" />
     <TextArea fx:id="element2Field" layoutX="56.0" layoutY="171.0" prefHeight="42.0" prefWidth="92.0" wrapText="true" />
-    <TextArea fx:id="cutMethods2Field" layoutX="156.0" layoutY="171.0" prefHeight="42.0" prefWidth="392.0" wrapText="true" />
     <Label layoutX="66.0" layoutY="243.0" text="Odpad [m]" />
     <Label layoutX="42.0" layoutY="311.0" text="Koszt odpadu [zł]" />
     <Label layoutX="611.0" layoutY="76.0" text="Zamówiona ilość" />
@@ -25,6 +24,6 @@
     <Label layoutX="34.0" layoutY="379.0" text="Minimum funkcji celu" />
     <Label layoutX="51.0" layoutY="447.0" text="x1, x2, x3...." />
     <TextArea fx:id="minimumField" layoutX="156.0" layoutY="366.0" prefHeight="42.0" prefWidth="392.0" wrapText="true" />
-    <TextArea fx:id="xField" layoutX="156.0" layoutY="434.0" prefHeight="42.0" prefWidth="392.0" wrapText="true" />
+    <TextArea layoutX="156.0" layoutY="434.0" prefHeight="59.0" prefWidth="392.0" wrapText="true" fx:id="xField" />
   </children>
 </AnchorPane>

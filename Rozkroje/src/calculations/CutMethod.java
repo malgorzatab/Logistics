@@ -92,4 +92,12 @@ public class CutMethod {
     public void setElement2_length(int element2_length) {
         this.element2_length = element2_length;
     }
+
+    @Override
+    public String toString() {
+        return
+                "{ element1_length=" + element1_length +
+                ", element2_length=" + element2_length + ", waste = " + waste + ", waste_price = " + waste_price +
+                "}\n";
+    }
 }
